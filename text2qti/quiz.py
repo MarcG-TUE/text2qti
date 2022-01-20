@@ -460,7 +460,9 @@ class Question(object):
             if len(self.choices) < 2:
                 raise Text2qtiError('Question must provide more than one choice')
             if self.correct_choices < 1:
-                raise Text2qtiError('Question must specify a correct choice')
+                pass
+                # no correct answer should be allowed for multiple answer questions
+                # raise Text2qtiError('Question must specify a correct choice')
 
 
 
